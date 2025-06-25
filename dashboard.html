@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Dashboard🌱</title>
+    <link rel="icon" href="icons/logomark.png" type="image/x-icon">
+    <link rel="stylesheet" href="dash-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!--Head Section of the Dashboard with the plant, logo and date&time information-->
+        <div class="head">
+            <div class="plant-box">
+                <p class="plant" name="plant">GRAPE</p>
+            </div>
+            <div class="logo-box">
+                <img class="logo" src="icons/logo.png" alt="AgriBotho Logo">
+            </div>
+            <div class="date-box">
+                 <p class="date-time" name="date-time" id="date-time">Mon 16 Jun 2025 16:46 </p>
+            </div>
+        </div> 
+        <!--Body part of the dashboard with the sensors, controls and graph-->
+        <div class="body">
+            <div class="left-side">
+                <div class="title"><p class="title">SENSORS</p></div>
+                <!--The sensors-->
+                <div class="row">
+                    <div class="sensor">
+                        <div class="sensor-background">
+                            <div class="icon">
+                                <div class="icon-border-temp"><img class="sensor-icon" src="icons/temp.png" alt="Temperature"></div>
+                            </div>
+                            <p name="temp-data" class="data" id="tempData">23.3°C</p>
+                        </div>
+                        <p class="sensor-name">Temperature</p>
+                    </div>
+                    <div class="sensor">
+                        <div class="sensor-background">
+                            <div class="icon">
+                                <div class="icon-border-humi"><img class="sensor-icon" src="icons/humidity.png" alt="Humidity"></div>
+                            </div>
+                            <p name="temp-data" class="data" id="humiData">50.3%</p>
+                        </div>
+                        <p class="sensor-name">Humidity</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sensor">
+                        <div class="sensor-background">
+                            <div class="icon">
+                                <div class="icon-border-soil"><img class="sensor-icon" src="icons/soil-moisture.png" alt="Soil Moisture"></div>
+                            </div>
+                            <p name="temp-data" class="data" id="soilData">20.2%</p>
+                        </div>
+                        <p class="sensor-name">Soil Moisture</p>
+                    </div>
+                    <div class="sensor">
+                        <div class="sensor-background">
+                            <div class="icon">
+                                <div class="icon-border-ligh"><img class="sensor-icon" src="icons/light-level.png" alt="Light Level"></div>
+                            </div>
+                            <p name="temp-data" class="data" id="lightData">40000</p>
+                            <p class="lux-data">LUX</p>
+                        </div>
+                        <p class="sensor-name">Light Level</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="ctrl-container">
+                    <div class="title"><p class="title">CONTROLS</p></div>
+                    <div class="ctrl-row">
+                        <div class="ctrl" onclick="fanSwitch()">
+                            <div class="ctrl-background" id="fanBg">
+                                <div class="ctrl-icon">
+                                    <img class="sensor-icon" src="icons/fan.png" alt="Fan">
+                                </div>
+                            </div>
+                            <p class="ctrl-name">Fan</p>
+                        </div>
+                         <div class="ctrl" onclick="heaterSwitch()">
+                            <div class="ctrl-background" id="heaterBg">
+                                <div class="ctrl-icon">
+                                    <img class="sensor-icon" src="icons/heater.png" alt="Heater">
+                                </div>
+                            </div>
+                            <p class="ctrl-name">Heater</p>
+                        </div>
+                         <div class="ctrl" onclick="irrigationSwitch()">
+                            <div class="ctrl-background" id="irrigationBg">
+                                <div class="ctrl-icon">
+                                    <img class="sensor-icon" src="icons/irrigation.png" alt="Irrigation">
+                                </div>
+                            </div>
+                            <p class="ctrl-name">Irrigation</p>
+                        </div>
+                         <div class="ctrl" onclick="lightSwitch()">
+                            <div class="ctrl-background" id="lightsBg">
+                                <div class="ctrl-icon">
+                                    <img class="sensor-icon" src="icons/lights.png" alt="Lights">
+                                </div>
+                            </div>
+                            <p class="ctrl-name">Lights</p>
+                        </div>
+                    </div>
+                    <div class="status"><p class="title">STATUS</p></div>
+                    <div class="status-card">
+                        <div class="system"><p class="sys-title">System: On</p></div>
+                        <div class="data-ctrl">
+                            <div class="left-data-ctrl">
+                                <div class="data-ctrl-row">
+                                    <p class="temp-con">Temperature: </p>
+                                    <p class="data-condition" id="tempCon">Normal</p>
+                                </div>
+                                <div class="data-ctrl-row">
+                                    <p class="humi-con">Humidity: </p>
+                                    <p class="data-condition" id="humiCon">Normal</p>
+                                </div>
+                                <div class="data-ctrl-row">
+                                    <p class="soil-con">Soil Moisture: </p>
+                                    <p class="data-condition" id="soilCon">Normal</p>
+                                </div>
+                                <div class="data-ctrl-row">
+                                    <p class="light-con">Light Level: </p>
+                                    <p class="data-condition" id="lightCon">Normal</p>
+                                </div>
+                            </div>
+                            <div class="right-data-ctrl">
+                                <div class="data-ctrl-row">
+                                    <p class="fan-con">Fan: </p>
+                                    <p class="ctrl-condition" id="fanStatus">Off</p>
+                                </div>
+                                <div class="data-ctrl-row">
+                                    <p class="heat-con">Heater: </p>
+                                    <p class="ctrl-condition" id="heaterStatus">Off</p>
+                                </div>
+                                <div class="data-ctrl-row">
+                                    <p class="irri-con">Irrigation: </p>
+                                    <p class="ctrl-condition" id="irrigationStatus">Off</p>
+                                </div>
+                                <div class="data-ctrl-row">
+                                    <p class="lights-con">Lights: </p>
+                                    <p class="ctrl-condition" id="lightsStatus">Off</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="dash-script.js"></script>
+</body>
+</html>

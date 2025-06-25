@@ -1,0 +1,238 @@
+/*General Dashboard Settings*/
+* {
+    font-family: Poppins, Arial;
+}
+
+
+/*Head Section (Top bar of the Dashboard with the plant, logo and time*/
+.head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.plant {
+    font-weight: 500;
+    padding-left: 5em;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    height: 4.5em;
+}
+
+.date-time {
+    font-weight: 500;
+    float: right;
+    padding-right: 5em;
+}
+
+/*Body part of the dashboard with the sensors, controls and graph*/
+/*GENERAL BODY:*/
+.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/*The left side (sensors)*/
+.left-side {
+    padding: 0 8em 0 8em;
+}
+.right-side {
+    padding: 0 8em 0 0;
+    display: grid;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.30em;
+    text-align: center;
+}
+
+/*THE SENSORS*/
+.row { /*The two sensors in a row*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.sensor { /*A sensor card*/
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 3fr 1fr;
+}
+.sensor-background { /*The square part that has the sensor icon and value*/
+    background-color: #FFFEFE;
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em #c2c2c2;
+    width: 12em;
+    height: 12em;
+}
+.icon { /*The icon and it's shaded background*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+/*The sensor shaded background*/
+.icon-border-temp { 
+    height: 5em;
+    width: 5em;
+    background-color: #FFDDE0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon-border-humi { 
+    height: 5em;
+    width: 5em;
+    background-color: #C7F8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon-border-soil { 
+    height: 5em;
+    width: 5em;
+    background-color: #FFECD7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon-border-ligh { 
+    height: 5em;
+    width: 5em;
+    background-color: #FFF6CA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.sensor-icon { /*The actual icon picture*/
+    height: 3.5em;
+}
+.sensor-name {
+    font-size: 1.05em;
+    text-align: center;
+    font-weight: 450;
+}
+.data {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    transform: translateY(-0.8em);
+}
+
+.lux-data {
+    text-align: center;
+    transform: translateY(-4em);
+    font-size: 1.05em;
+}
+
+/*THE CONTROLS*/
+.ctrl-row { /*The four controls in a row*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+}
+.ctrl { /*A control card*/
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    cursor: pointer;
+}
+
+.ctrl:hover{
+    transform: scale(1.10,1.10);
+}
+.ctrl:active{
+    transform: scale(0.95,0.95);
+}
+.ctrl-background { /*The square part that has the control icon*/
+    background-color: #FFFEFE;
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em #c2c2c2;
+    width: 6em;
+    height: 6em;
+}
+.ctrl-icon { /*The actual icon picture*/
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(1.5em);
+}
+.ctrl-name {
+    font-size: 0.9em;
+    text-align: center;
+    font-weight: 430;
+}
+/*THE STATUS*/
+.status {
+    font-size: 1.0em;
+    text-align: center;
+}
+
+.data-ctrl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.data-ctrl-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+}
+
+.ctrl-condition {
+    color: gray;
+    font-weight: 450;
+}
+.data-condition {
+    color: #0EE806;
+    font-weight: 450;
+}
+
+.sys-title {
+    font-weight: 450;
+}
+
+.sys-title,
+.temp-con,
+.humi-con,
+.soil-con,
+.light-con,
+.data-condition {
+    margin: 0.5em;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.fan-con,
+.heat-con,
+.irri-con,
+.lights-con,
+.ctrl-condition{
+    margin: 0.5em;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.status-card {
+    background-color: #FFFEFE;
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em #c2c2c2;
+    padding: 2em 0 2em 0;
+}
