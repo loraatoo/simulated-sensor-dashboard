@@ -11,15 +11,21 @@ The dashboard simulates environmental data that a farmer would monitor and contr
 🚀FEATURES
 
 List the features that the project has like this:
+
 Shows the current date and time.
+
 Simulates data (increasing and decreasing values).
+
 Controls that affect the sensor data and change in status to show control in use.
 
 ⚙️TECH STACK
 
 List the technologies used to build:
+
 HTML/CSS
+
 Javascript
+
 Figma
 
 🫱🏽‍🫲🏽CONTRIBUTORS
